@@ -72,13 +72,17 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-//    Hilt
     implementation(libs.dagger.hilt.android)
     implementation (libs.androidx.hilt.navigation.compose)
-//    ksp(libs.dagger.compiler)
     ksp(libs.hilt.compiler)
-
+    ksp(libs.androidx.room)
+    implementation(libs.androidx.room.runtime)
     implementation(libs.dagger.hilt.android)
-
     coreLibraryDesugaring(libs.desugar.jdk.libs)
+    implementation(libs.dagger)
+    ksp(libs.dagger.compiler)
+    implementation(libs.dagger.android.support)
+    implementation(libs.dagger.android.processor)
+    implementation(libs.java.jwt)
+
 }
